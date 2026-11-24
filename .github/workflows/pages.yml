@@ -29,6 +29,10 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html styles.css favicon.svg assets _site/
+      # Pages caches files for 10 minutes, so a new page could pair with the
+      # old stylesheet. Each deploy gives the stylesheet its own URL.
+      - name: Version the stylesheet
+        run: sed -i "s|href=\"styles.css\"|href=\"styles.css?v=${GITHUB_SHA::7}\"|" _site/index.html
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
