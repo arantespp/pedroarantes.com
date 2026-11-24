@@ -1,7 +1,7 @@
 /* Tokens follow the Flow design system (ttoss): ink on paper, IBM Plex,
    elevation is a border. Colour is reserved for state, and a personal page
    has none to report, so this page is achromatic end to end. */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap");
 
 :root {
   --surface-page: #fcfcfb;
@@ -14,8 +14,8 @@
   --border-strong: #c4c6c1;
   --ring-focus: 0 0 0 3px rgba(22, 24, 26, 0.2);
 
-  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
   --tracking-heading: -0.015em;
   --tracking-heading-tight: -0.02em;
@@ -33,7 +33,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
+  :root:not([data-theme="light"]) {
     --surface-page: #101214;
     --surface-raised: #181b1d;
     --text-strong: #f2f3f1;
@@ -47,7 +47,7 @@
   }
 }
 
-:root[data-theme='dark'] {
+:root[data-theme="dark"] {
   --surface-page: #101214;
   --surface-raised: #181b1d;
   --text-strong: #f2f3f1;
@@ -178,6 +178,33 @@ a:hover {
   padding-block: 4rem 2.5rem;
 }
 
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.portrait {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-default);
+  object-fit: cover;
+}
+
+@media (min-width: 46rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .portrait {
+    order: 2;
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
 .hero h1 {
   margin: 0;
   max-width: 18ch;
@@ -219,13 +246,13 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .plate img {
+  :root:not([data-theme="light"]) .plate img {
     filter: invert(1);
     opacity: 0.86;
   }
 }
 
-:root[data-theme='dark'] .plate img {
+:root[data-theme="dark"] .plate img {
   filter: invert(1);
   opacity: 0.86;
 }
@@ -346,17 +373,4 @@ section h2 {
 .links a {
   overflow-wrap: anywhere;
   text-align: right;
-}
-
-/* ---- Footer ---- */
-
-.footer {
-  border-top: 1px solid var(--border-default);
-  padding-block: 1.5rem 2.5rem;
-  font-size: 0.8125rem;
-  color: var(--text-faint);
-}
-
-.footer p {
-  margin: 0;
 }

@@ -15,13 +15,18 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://pedroarantes.com/" />
+    <meta
+      property="og:image"
+      content="https://pedroarantes.com/assets/pedro-640.webp"
+    />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script>
       // Set before first paint so a stored theme never flashes the other one.
       try {
-        const t = localStorage.getItem('theme');
-        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        const t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark")
+          document.documentElement.dataset.theme = t;
       } catch {}
     </script>
   </head>
@@ -32,7 +37,9 @@
         <nav class="nav" aria-label="Main">
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <button class="theme-toggle" type="button" aria-label="Toggle theme">theme</button>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            theme
+          </button>
         </nav>
       </div>
     </header>
@@ -40,19 +47,33 @@
     <main>
       <div class="shell">
         <section class="hero">
-          <p class="eyebrow">Founder · Technical lead</p>
-          <h1>I build technology companies, from the code to the operation.</h1>
-          <p class="lead">
-            I founded Triangulos Ventures, naturali and OneClick Ads, and led the engineering of
-            each. I write the software, design the architecture and keep what ships running in
-            production.
-          </p>
+          <img
+            class="portrait"
+            src="assets/pedro-640.webp"
+            alt="Pedro Arantes"
+            width="640"
+            height="640"
+          />
+          <div class="hero-text">
+            <p class="eyebrow">Founder · Technical lead</p>
+            <h1>
+              I build technology companies, from the code to the operation.
+            </h1>
+            <p class="lead">
+              I founded Triangulos Ventures, naturali and OneClick Ads, and led
+              the engineering of each. I write the software, design the
+              architecture and keep what ships running in production.
+            </p>
+          </div>
         </section>
 
         <div class="plate plate--horizon" aria-hidden="true">
           <img
             src="assets/horizon-1200.webp"
-            srcset="assets/horizon-1200.webp 1200w, assets/horizon-2400.webp 2400w"
+            srcset="
+              assets/horizon-1200.webp 1200w,
+              assets/horizon-2400.webp 2400w
+            "
             sizes="100vw"
             alt=""
             width="2400"
@@ -64,7 +85,8 @@
           <p class="eyebrow">Projects</p>
           <h2>What I have built</h2>
           <p class="section-lead">
-            Three companies, each founded by me, each with its engineering under my lead.
+            Three companies, each founded by me, each with its engineering under
+            my lead.
           </p>
 
           <ol class="projects">
@@ -76,9 +98,10 @@
               </div>
               <div class="project-body">
                 <p>
-                  A Brazilian venture builder that designs, builds and runs its own technology
-                  companies. Triangulos Ventures is the trade name of Triangulos Tecnologia LTDA,
-                  the company that operates naturali.
+                  A Brazilian venture builder that designs, builds and runs its
+                  own technology companies. Triangulos Ventures is the trade
+                  name of Triangulos Tecnologia LTDA, the company that operates
+                  naturali.
                 </p>
                 <ul class="facts">
                   <li>Venture builder</li>
@@ -91,20 +114,24 @@
             <li class="project">
               <div class="project-head">
                 <h3>naturali</h3>
-                <a class="domain mono" href="https://naturali.ai/">naturali.ai</a>
+                <a class="domain mono" href="https://naturali.ai/"
+                  >naturali.ai</a
+                >
                 <p class="role">Founder, CEO and technical lead</p>
               </div>
               <div class="project-body">
                 <p>
-                  Complete agentic infrastructure behind a single API: versioned agents, knowledge
-                  with sources to cite, channels such as WhatsApp and Discord, scheduled and
-                  event-driven runs, guardrails and human approvals, and evaluations before every
+                  Complete agentic infrastructure behind a single API: versioned
+                  agents, knowledge with sources to cite, channels such as
+                  WhatsApp and Discord, scheduled and event-driven runs,
+                  guardrails and human approvals, and evaluations before every
                   release.
                 </p>
                 <p>
-                  It started from rebuilding, project after project, the same fragile and unaudited
-                  layer around agents in production. The premise: agents you can inspect, limit and
-                  trust, with people in charge.
+                  It started from rebuilding, project after project, the same
+                  fragile and unaudited layer around agents in production. The
+                  premise: agents you can inspect, limit and trust, with people
+                  in charge.
                 </p>
                 <ul class="facts">
                   <li>Agents</li>
@@ -120,20 +147,23 @@
             <li class="project">
               <div class="project-head">
                 <h3>OneClick Ads</h3>
-                <a class="domain mono" href="https://oneclickads.com.br/">oneclickads.com.br</a>
+                <a class="domain mono" href="https://oneclickads.com.br/"
+                  >oneclickads.com.br</a
+                >
                 <p class="role">Founder and technical lead</p>
               </div>
               <div class="project-body">
                 <p>
-                  A performance platform for Meta Ads. It tracks conversions by UTM, builds the
-                  dashboards and optimises campaigns on its own, around the clock: it scales the ad
-                  sets that sell, pauses the ones that do not and redistributes budget across every
+                  A performance platform for Meta Ads. It tracks conversions by
+                  UTM, builds the dashboards and optimises campaigns on its own,
+                  around the clock: it scales the ad sets that sell, pauses the
+                  ones that do not and redistributes budget across every
                   campaign in the account, through Meta's official API.
                 </p>
                 <p>
-                  Where Meta's automated rules use fixed thresholds, OneClick compares each ad set
-                  with its campaign's average and takes actions those rules cannot, such as
-                  duplicating and resetting.
+                  Where Meta's automated rules use fixed thresholds, OneClick
+                  compares each ad set with its campaign's average and takes
+                  actions those rules cannot, such as duplicating and resetting.
                 </p>
                 <ul class="facts">
                   <li>25,000+ campaigns optimised</li>
@@ -162,7 +192,9 @@
           <ul class="links">
             <li>
               <span class="label">LinkedIn</span>
-              <a class="mono" href="https://www.linkedin.com/in/arantespp/">linkedin.com/in/arantespp</a>
+              <a class="mono" href="https://www.linkedin.com/in/arantespp/"
+                >linkedin.com/in/arantespp</a
+              >
             </li>
             <li>
               <span class="label">X</span>
@@ -170,29 +202,26 @@
             </li>
             <li>
               <span class="label">GitHub</span>
-              <a class="mono" href="https://github.com/arantespp">github.com/arantespp</a>
+              <a class="mono" href="https://github.com/arantespp"
+                >github.com/arantespp</a
+              >
             </li>
           </ul>
         </section>
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="shell">
-        <p>Pedro Arantes. Built on the Flow design system.</p>
-      </div>
-    </footer>
-
     <script>
-      document.querySelector('.theme-toggle').addEventListener('click', () => {
+      document.querySelector(".theme-toggle").addEventListener("click", () => {
         const root = document.documentElement;
         const dark =
-          root.dataset.theme === 'dark' ||
-          (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
-        const next = dark ? 'light' : 'dark';
+          root.dataset.theme === "dark" ||
+          (!root.dataset.theme &&
+            matchMedia("(prefers-color-scheme: dark)").matches);
+        const next = dark ? "light" : "dark";
         root.dataset.theme = next;
         try {
-          localStorage.setItem('theme', next);
+          localStorage.setItem("theme", next);
         } catch {}
       });
     </script>
